@@ -19,6 +19,7 @@ shopt -s histappend
 HISTSIZE=1000000
 HISTFILESIZE=1000000
 HISTTIMEFORMAT="%F_%T "
+PROMPT_COMMAND='history -a'
 
 # check the window size after each command and, if necessary,
 # update the values of LINES and COLUMNS.
@@ -122,3 +123,5 @@ fi
 
 alias tmx='tmux attach || tmux new'
 PS1='\[\e[0;32m\]\u\[\e[m\] \[\e[1;34m\]\w\[\e[m\]$(__git_ps1 " (%s)") \[\e[1;32m\]\$\[\e[m\] '
+
+alias start-ssh-agent='eval $(ssh-agent -s) && ssh-add ~/.ssh/id_rsa'
