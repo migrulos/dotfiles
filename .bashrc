@@ -93,6 +93,8 @@ alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
 
+alias vi='vim'
+
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
 #alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
@@ -119,9 +121,10 @@ fi
 
 alias tmx='tmux attach || tmux new'
 
-PS1='\[\e[0;32m\]\u\[\e[m\] \[\e[1;34m\]\w\[\e[m\]$(__git_ps1 " (%s)") \[\e[1;32m\]\$\[\e[m\] '
+#PS1='\[\e[0;32m\]\u\[\e[m\] \[\e[1;34m\]\w\[\e[m\]$(__git_ps1 " (%s)") \[\e[1;32m\]\$\[\e[m\] '
 
 alias start-ssh-agent='eval $(ssh-agent -s) && ssh-add ~/.ssh/id_rsa'
 
 alias gitlog='git log --graph --pretty=oneline --abbrev-commit --all --decorate'
 source <(kubectl completion bash)
+source /home/pes/usefull/kube-ps1/kube-ps1.sh
